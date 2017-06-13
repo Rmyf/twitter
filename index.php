@@ -1,4 +1,5 @@
 
+
 <?php
 
 include_once('Tweet.php');
@@ -34,29 +35,45 @@ $tweets=[
 
 foreach($tweets as $tweet){
     echo '<section class="tweet">';
-    echo '<h2 class="pseudo">'.$tweet['pseudo'].'</h2>';
-    echo '<p class="message">'.$tweet['message'].'</p>';
-    echo '<img class= "avatar" src="images/'.$tweet['avatar'].'"/>';
-    echo '<p class="retweets">'.$tweet['retweets'].'Likes:'.$tweet['likes'].'</p>';
-    echo '<p class="date">'.$tweet['date'].'</p>';
+    echo '<h2 class="pseudo">' . $tweet['pseudo'] . '</h2>';
+    echo '<img class="avatar" src="images/' . $tweet['avatar'] . '"/>'; 
+    echo '<p class="message">' . $tweet['message'] . '</p>';
+    echo '<p class=infos">Retweets:  ' . $tweet['retweets'] . '  Likes: '. $tweet['likes'] . '</p>';
+    echo '<p class="date">' . $tweet['date'] . '</p>';
     echo '</section>';
     }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tweeter</title>
-</head>
-<body>
-<div class=timeline><h2>TIMELINE</h2></div>
-<div class=tendance><h2> TENDANCES</h2></div>
 
 
-<style>
+    <style>
+
+
+
+body {
+background-color:#f5f8fa;
+
+background-image:url(images/twitter.png);
+background-repeat: no-repeat;
+background-position:center;
+
+}
+
+
+
+section {
+    width:30%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    background-color: white;
+    
+
+}
+
+h2, p {
+    font-family:sans-serif;
+    color: #66757f;
+}
 
         .timeline{
          
@@ -73,6 +90,10 @@ foreach($tweets as $tweet){
         
       
     </style>
+
+</head>
+<body>
+
 
 </body>
 </html>
